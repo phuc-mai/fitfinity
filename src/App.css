@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --lightgray: #5a5959;
+  --red: #ff0436;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  padding: 10px 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 99999;
+}
+
+.nav_img img {
+  max-width: 200px;
+}
+
+.nav_links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-size: 17px;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav_buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav_buttons i {
+  color: var(--white);
+  font-size: 25px;
+}
+
+.nav_buttons button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 3px;
+  border: 2px solid var(--lightgray);
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav_buttons button i {
+  transition: 1.5s;
+  font-size: 40px;
+  color: var(--white);
+}
+
+.nav_buttons button i:hover {
+  transform: rotateZ(360deg);
+}
+
+.hero {
+  /* height: 95vh; */
+  position: relative;
+}
+
+.hero_background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero_content {
+  z-index: 2;
+  position: relative;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 200px 0 100px 700px;
+}
+
+.hero_text h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero_text h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.hero_text h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.hero_btn {
+  position: relative;
+  width: 190px;
+  height: 70px;
+  border: 2px solid rgba(255, 255, 255, 0.362);
+}
+
+.hero_text button {
+  width: 190px;
+  height: 70px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: -18px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero_text button:hover {
+  margin: -2px; /* Becasue border-width 2px */
+}
+
+.hero_text button i {
+  color: var(--red);
+  margin-left: 5px;
+}
+
+.hero_social {
+  position: absolute;
+  top: 300px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transform: rotate(270deg);
+}
+
+.hero_social i {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  transform: rotate(90deg);
+}
+
+.hero_social i:hover {
+  color: var(--red);
+}
+
+.about {
+  background-image: url("../src/images/about_background.jpg");
+  object-fit: cover;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.about_general {
+  display: flex;
+  gap: 50px;
+  padding: 80px 100px;
+  margin: -50px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.about_general div {
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 40px 0;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.about_general div:hover {
+  background-image: url('../src/images/general_background.jpg');
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about_general div > * {
+  margin-bottom: 15px;
 }
