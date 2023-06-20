@@ -34,36 +34,37 @@ const WhoWeAre = () => {
 
       <div className="about_whoweare">
         <div className="about_whoweare_text">
-        <h3>Who We Are</h3>
-        <h1>Take Your Health And Body To Next Level</h1>
-        <p>
-          Take your health and body to the next level with our comprehensive
-          program designed to help you reach your fitness goals.
-        </p>
-        <div className="about_outstanding">
-          <div>
-            <img src="images/who-we-are/weightlifter.png" />
-            <h2>PROFESSIONAL TRAINERS</h2>
+          <h3>Who We Are</h3>
+          <h1>Take Your Health And Body To Next Level</h1>
+          <p>
+            Take your health and body to the next level with our comprehensive
+            program designed to help you reach your fitness goals.
+          </p>
+          <div className="about_outstanding">
+            <div>
+              <img src="images/who-we-are/weightlifter.png" />
+              <h4>PROFESSIONAL TRAINERS</h4>
+            </div>
+
+            <div>
+              <img src="images/who-we-are/equipment.png" />
+              <h4>MODERN EQUIPMENTS</h4>
+            </div>
+
+            <div>
+              <img src="images/who-we-are/gym.png" />
+              <h4>FANCY GYM MACHINES</h4>
+            </div>
           </div>
 
-          <div>
-            <img src="images/who-we-are/equipment.png" />
-            <h2>MODERN EQUIPMENTS</h2>
-          </div>
-
-          <div>
-            <img src="images/who-we-are/gym.png" />
-            <h2>FANCY GYM MACHINES</h2>
+          <div className="whoweare_btn">
+            <button>
+              TAKE A TOUR <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </div>
-        <div className="about_button">
-          <button>
-            Contact Us <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-        </div>
 
-        <img src="images/who-we-are/girl-run.png"/>
+        <img src="images/who-we-are/run_girl.png" />
       </div>
     </section>
   );

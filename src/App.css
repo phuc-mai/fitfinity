@@ -13,6 +13,7 @@ body {
   --black: #000000;
   --white: #ffffff;
   --lightgray: #5a5959;
+  --gray: #3F3F3F;
   --red: #ff0436;
 }
 
@@ -122,13 +123,13 @@ body {
 .hero_btn {
   position: relative;
   width: 190px;
-  height: 70px;
+  height: 55px;
   border: 2px solid rgba(255, 255, 255, 0.362);
 }
 
 .hero_text button {
   width: 190px;
-  height: 70px;
+  height: 55px;
   font-size: 16px;
   font-weight: 700;
   margin: -18px 15px;
@@ -166,27 +167,46 @@ body {
   color: var(--red);
 }
 
-.about {
+.hero-pages {
+  height: 280px;
+  background-image: url("/public/images/login/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hero-pages h3 {
+  color: var(--white);
+  font-size: 40px;
+}
+
+/* .about {
   background-image: url("../src/images/about_background.jpg");
   object-fit: cover;
   background-size: cover;
   background-position: center center;
   width: 100%;
   height: 100%;
-}
+} */
 
 .about_general {
   display: flex;
-  gap: 50px;
-  padding: 80px 100px;
+  gap: 30px;
+  padding: 80px 150px;
   margin: -50px 0;
   position: relative;
   z-index: 2;
 }
 
 .about_general div {
-  padding: 40px;
-  background-color: var(--white);
+  padding: 30px;
+  background-image: url("../src/images/general_bg.jpg");
+  object-fit: cover;
+  background-size: cover;
+  background-position: center center;
   border-radius: 40px 0;
   text-align: center;
   transition: all 0.3s;
@@ -194,7 +214,7 @@ body {
 }
 
 .about_general div:hover {
-  background-image: url('../src/images/general_background.jpg');
+  background-image: url('../src/images/general_bg_hover.jpg');
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: white;
@@ -202,4 +222,84 @@ body {
 
 .about_general div > * {
   margin-bottom: 15px;
+}
+
+.about_whoweare {
+  padding: 40px 150px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about_whoweare img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.about_whoweare_text h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.about_whoweare_text h1 {
+  font-size: 35px;
+  line-height: 1.3;
+  word-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.about_whoweare_text p {
+  font-size: 18px;
+  color: var(--lightgray);
+  margin-bottom: 60px;
+}
+
+.about_outstanding {
+  display: flex;
+  text-align: center;
+}
+
+.about_outstanding img {
+  margin-bottom: 9px;
+  max-width: 60px;
+}
+
+.about_outstanding h4 {
+  font-size: 18px;
+}
+
+.about_outstanding div:nth-child(2) {
+  border-left: 0.7px solid var(--gray);
+  border-right: 0.7px solid var(--gray);
+}
+
+.whoweare_btn {
+  margin-top: 80px;
+  width: 190px;
+  height: 55px;
+  border: 1px solid var(--lightgray);
+}
+
+.whoweare_btn button {
+  width: 190px;
+  height: 55px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--gray);
+  margin: -18px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.whoweare_btn button:hover {
+  margin: -1px; /* Becasue border-width 2px */
+  background-color: var(--red);
+
+}
+
+.whoweare_btn button i {
+  margin-left: 5px;
 }
