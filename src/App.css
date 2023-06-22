@@ -12,8 +12,10 @@ body {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --darkwhite: #f8f8f8;
+  --superlightgray: #d7d7d7;
   --lightgray: #5a5959;
-  --gray: #3F3F3F;
+  --gray: #3f3f3f;
   --red: #ff0436;
 }
 
@@ -124,7 +126,7 @@ body {
   position: relative;
   width: 190px;
   height: 55px;
-  border: 2px solid rgba(255, 255, 255, 0.362);
+  border: 1px solid var(--white);
 }
 
 .hero_text button {
@@ -134,15 +136,17 @@ body {
   font-weight: 700;
   margin: -18px 15px;
   cursor: pointer;
+  border: none;
   transition: 0.3s ease;
 }
 
 .hero_text button:hover {
-  margin: -2px; /* Becasue border-width 2px */
+  margin: -1px; /* Becasue border-width 2px */
+  background-color: var(--red);
+  color: var(--white);
 }
 
 .hero_text button i {
-  color: var(--red);
   margin-left: 5px;
 }
 
@@ -214,7 +218,7 @@ body {
 }
 
 .about_general div:hover {
-  background-image: url('../src/images/general_bg_hover.jpg');
+  background-image: url("../src/images/general_bg_hover.jpg");
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: white;
@@ -297,9 +301,418 @@ body {
 .whoweare_btn button:hover {
   margin: -1px; /* Becasue border-width 2px */
   background-color: var(--red);
-
 }
 
 .whoweare_btn button i {
   margin-left: 5px;
 }
+
+.about_page {
+  margin: 100px 0;
+}
+
+.about_page_history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px 150px;
+}
+
+.about_page_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about_page_text > * {
+  margin-bottom: 20px;
+}
+
+.about_page_text img {
+  max-width: 80px;
+}
+
+.about_page_text p {
+  max-width: 400px;
+}
+
+.classes {
+  margin: 100px 160px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.class {
+  position: relative;
+  max-width: 320px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.class_bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.class_bg .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.class-text {
+  position: relative;
+  margin: 150px 30px 0px;
+  color: var(--white);
+}
+
+.class-text hr {
+  width: 80px;
+  border: 2px solid red;
+  margin-bottom: 15px;
+}
+
+.class-text h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.class-text p {
+  font-size: 20px;
+}
+
+.class_btn {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
+}
+
+.class_btn button {
+  background-color: var(--white);
+  width: 180px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: -18px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.class_btn button:hover {
+  margin: -1px; /* Becasue border-width 2px */
+}
+
+.class_btn button i {
+  color: var(--red);
+  margin-left: 5px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 100px;
+  gap: 100px;
+}
+
+.contact-overall,
+.contact-form {
+  flex: 1;
+}
+
+.contact-overall h1 {
+  font-size: 35px;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.contact-overall p {
+  font-size: 17px;
+  line-height: 1.6;
+  font-family: "Rubik", sans-serif;
+  color: #706f7b;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.contact-overall li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-overall li a {
+  text-decoration: none;
+  color: #010103;
+}
+
+.contact-overall li a:hover {
+  color: #ff4d30;
+}
+
+.contact-form {
+  background-color: var(--darkwhite);
+  padding: 30px 30px;
+}
+
+.contact-form h1 {
+  font-size: 24px;
+}
+
+.contact-form hr {
+  width: 80px;
+  border: 2px solid red;
+  margin: 10px 0 30px 0;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 95%;
+  border: 0.5px solid var(--lightgray);
+  outline: none;
+  padding: 15px 20px;
+  background-color: var(--white);
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: var(--lightgray);
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.contact-form button {
+  width: 95%;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--red);
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.6);
+  background-color: #fa4226;
+}
+
+.day_schedule {
+  padding: 50px 200px;
+}
+
+.class_schedule {
+  padding: 20px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+  align-items: center;
+  background-color: var(--darkwhite);
+  margin-bottom: 20px;
+}
+
+.class_schedule div:nth-child(2),
+.class_schedule div:nth-child(3) {
+  text-align: center;
+}
+
+.class_schedule div:nth-child(4) {
+  text-align: end;
+}
+
+.class_schedule p {
+  color: var(--lightgray);
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.class_schedule h4 {
+  font-size: 18px;
+}
+
+.class_schedule button {
+  padding: 10px 20px;
+  background-color: var(--gray);
+  border-radius: 20px;
+  border: none;
+  color: var(--white);
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.class_schedule button:hover {
+  background-color: var(--red);
+}
+
+.schedule-btns {
+  margin: 100px 300px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.schedule-btns button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: 1px solid var(--superlightgray);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.schedule-btns button:hover,
+.colored-day-btn {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.day-btn {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.choose-us {
+  padding: 100px 150px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.choose-us img {
+  max-width: 600px;
+}
+
+.choose-us-text h3 {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.choose-us-text h1 {
+  color: var(--white);
+  font-size: 35px;
+  line-height: 1.3;
+  word-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.choose-us-text p {
+  font-size: 18px;
+  color: var(--superlightgray);
+  margin-bottom: 60px;
+}
+
+.choose-us-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.choose-us-benefits > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.choose-us-benefits img {
+  max-width: 80px;
+  background-color: var(--gray);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.choose-us-benefits img:hover {
+  background-color: var(--red);
+}
+
+.choose-us-benefits h5 {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.choose-us-btn {
+  margin-top: 80px;
+  width: 190px;
+  height: 55px;
+  border: 1px solid var(--lightgray);
+}
+
+.choose-us-btn button {
+  width: 190px;
+  height: 55px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--white);
+  margin: -18px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.choose-us-btn button:hover {
+  margin: -1px; /* Becasue border-width 2px */
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.choose-us-btn button i {
+  margin-left: 5px;
+}
+
+.trainers {
+  padding: 100px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainers h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.trainers h1 {
+  font-size: 35px;
+  word-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.trainers p {
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 60px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.trainers-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.trainer {
+  max-width: 400px;
+  /* background-image: url(../src/images/trainer-bg.png); */
+}
+
+.trainer img {
+  max-width: 200px;
+}
+
