@@ -675,25 +675,28 @@ body {
 }
 
 .trainers {
-  padding: 100px 70px;
+  padding: 100px 180px;
+}
+
+.trainers-overall {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.trainers h3 {
+.trainers-overall h3 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
-.trainers h1 {
+.trainers-overall h1 {
   font-size: 35px;
   word-spacing: 4px;
   margin-bottom: 15px;
 }
 
-.trainers p {
+.trainers-overall p {
   font-size: 18px;
   color: var(--gray);
   margin-bottom: 60px;
@@ -702,17 +705,31 @@ body {
 }
 
 .trainers-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+}
+
+.trainer-profile {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
+  justify-content: center;
 }
 
-.trainer {
-  max-width: 400px;
-  /* background-image: url(../src/images/trainer-bg.png); */
+.trainer-bg {
+  position: absolute;
+  max-width: 300px;
 }
 
-.trainer img {
+.trainer-img {
+  position: relative;
   max-width: 200px;
 }
 
+.trainer-text {
+  position: relative;
+  background-color: var(--white);
+  padding: 20px;
+  margin: -100px 0;
+
+}
