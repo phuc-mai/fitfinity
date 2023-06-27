@@ -1,10 +1,13 @@
 import React from "react";
 import HeroPages from "../components/HeroPages";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
     <>
       <HeroPages name="Contact" />
+
       <section className="contact">
         <div className="contact-overall">
           <h1>We are here for help you! To Shape Your Body</h1>
@@ -59,6 +62,9 @@ const Contact = () => {
           </form>
         </div>
       </section>
+
+      <Banner />
+      <Footer />
     </>
   );
 };

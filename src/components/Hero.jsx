@@ -3,11 +3,6 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="hero">
-      <img
-        className="hero_background"
-        src="images/hero/hero_background.png"
-        alt="hero-backround"
-      />
       <div className="hero_content">
         <div className="hero_text">
           <h4>FIND YOUR ENERGY</h4>

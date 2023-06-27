@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Classes from "./pages/Classes";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-
+import Pricing from "./pages/Pricing";
 import Schedule from "./pages/Schedule";
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
         <Route index path="classes" element={<Classes />} />
         <Route index path="contact" element={<Contact />} />
         <Route index path="about" element={<About />} />
-
+        <Route index path="pricing" element={<Pricing />} />
       </Routes>
     </>
   );

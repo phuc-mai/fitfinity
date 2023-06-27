@@ -1,5 +1,7 @@
 import React from "react";
 import HeroPages from "../components/HeroPages";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 import Cycling from "../classes_images/cycling.jpg";
 import Meditation from "../classes_images/meditation.jpg";
@@ -73,6 +75,7 @@ const Classes = () => {
   return (
     <>
       <HeroPages name="Classes" />
+
       <div className="classes">
         {Class_Data.map((item) => (
           <div className="class">
@@ -100,6 +103,9 @@ const Classes = () => {
           </div>
         ))}
       </div>
+
+      <Banner />
+      <Footer />
     </>
   );
 };

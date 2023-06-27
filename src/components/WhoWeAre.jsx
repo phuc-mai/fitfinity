@@ -43,17 +43,23 @@ const WhoWeAre = () => {
           <div className="about_outstanding">
             <div>
               <img src="images/who-we-are/weightlifter.png" />
-              <h4>PROFESSIONAL TRAINERS</h4>
+              <h4>
+                PROFESSIONAL <br /> TRAINERS
+              </h4>
             </div>
 
             <div>
               <img src="images/who-we-are/equipment.png" />
-              <h4>MODERN EQUIPMENTS</h4>
+              <h4>
+                MODERN <br /> EQUIPMENTS
+              </h4>
             </div>
 
             <div>
               <img src="images/who-we-are/gym.png" />
-              <h4>FANCY GYM MACHINES</h4>
+              <h4>
+                FANCY <br /> MACHINES
+              </h4>
             </div>
           </div>
 
@@ -64,7 +70,9 @@ const WhoWeAre = () => {
           </div>
         </div>
 
-        <img src="images/who-we-are/run_girl.png" />
+        <div className="about_whoweare_img">
+          <img src="images/who-we-are/run_girl.png" />
+        </div>
       </div>
     </section>
   );

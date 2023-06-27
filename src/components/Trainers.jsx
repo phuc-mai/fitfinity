@@ -38,18 +38,23 @@ const Trainers = () => {
       <div className="trainers-info">
         {TrainerData.map((item) => (
           <div className="trainer">
-            <div className="trainer-profile">
-              <img className="trainer-bg" src="images/trainers/trainer-bg.png" />
-              <img className="trainer-img" src={item.img} />
-            </div>
+            {/* <div className="trainer-profile"> */}
+            <img className="trainer-bg" src="images/trainers/trainer-bg.png" />
+            <img className="trainer-img" src={item.img} />
+            {/* </div> */}
             <div className="trainer-text">
               <h1>{item.name}</h1>
               <p>{item.position}</p>
+              <div className="trainer-social">
+                <i className="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-regular fa-envelope"></i>
+              </div>
             </div>
           </div>
         ))}
       </div>
-
     </section>
   );
 };

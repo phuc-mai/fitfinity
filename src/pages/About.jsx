@@ -1,5 +1,7 @@
 import React from "react";
 import HeroPages from "../components/HeroPages";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -67,6 +69,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Banner />
+      <Footer />
     </>
   );
 };

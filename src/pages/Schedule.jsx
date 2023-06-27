@@ -1,5 +1,7 @@
 import React from "react";
 import HeroPages from "../components/HeroPages";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import DaySchedule from "../components/DaySchedule";
 import { useState } from "react";
 
@@ -85,6 +87,9 @@ const Schedule = () => {
       {activeBtn === "Fri" && <DaySchedule dayID={4} />}
       {activeBtn === "Sat" && <DaySchedule dayID={5} />}
       {activeBtn === "Sun" && <DaySchedule dayID={6} />}
+
+      <Banner />
+      <Footer />
     </>
   );
 };

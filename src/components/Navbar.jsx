@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  // Navbar Background when scrolling down
+  const [navBg, setNavBg] = useState("");
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      setNavBg("nav-bg");
+    } else {
+      setNavBg("");
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+
+  const [mobileNav, setMobileNav] = useState(false)
+  const openMobileNav = () => {
+    setMobileNav(!mobileNav)
+  }
+
   return (
     <>
       <nav>
         {/* desktop */}
-        <div className="nav">
+        <div className={`nav ${navBg}`}>
           <div className="nav_img">
             <Link to="/">
               <img src="images/Logo.png" alt="logo" />
@@ -25,28 +41,18 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link className="galary-link" to="/galary">
-                Galary
-              </Link>
-            </li>
-            <li>
               <Link className="schedule-link" to="/schedule">
                 Schedule
               </Link>
             </li>
             <li>
-              <Link className="blog-link" to="/blog">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link className="pricing-link" to="/pricing">
-                Pricing
-              </Link>
-            </li>
-            <li>
               <Link className="classes-link" to="/classes">
                 Classes
+              </Link>
+            </li>
+            <li>
+              <Link className="classes-pricing" to="/pricing">
+                Pricing
               </Link>
             </li>
             <li>
@@ -57,14 +63,60 @@ const Navbar = () => {
           </ul>
 
           <div className="nav_buttons">
+            {/* Hamburger icon */}
+            <div className="hamburger-menu" onClick={openMobileNav}> 
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
             <Link to="/signin">
               <i class="fa-regular fa-user"></i>
             </Link>
             <button href="/contact">
-              <i class="fa-solid fa-square-plus" style={{ color: '#FF0436' }}></i>{" "}
+              <i
+                class="fa-solid fa-square-plus"
+                style={{ color: "#FF0436" }}
+              ></i>{" "}
               JOIN CLASS NOW
             </button>
           </div>
+        </div>
+
+        {/* Mobile */}
+        <div className={`mobile-nav ${mobileNav ? "open-mobile-nav" : ""}`}>
+          <div className="mobile-nav-close" onClick={openMobileNav}>
+            <i class="fa-solid fa-xmark"></i></div>
+          <ul className="mobile-nav_links">
+            <li>
+              <Link to="/" onClick={openMobileNav}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={openMobileNav}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/schedule" onClick={openMobileNav}>
+              Schedule
+              </Link>
+            </li>
+            <li>
+              <Link to="/classes" onClick={openMobileNav}>
+                Classes
+              </Link>
+            </li>
+            <li>
+              <Link to="/pricing" onClick={openMobileNav}>
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={openMobileNav}>
+                Contact
+              </Link>
+            </li>
+          </ul>
         </div>
       </nav>
     </>
