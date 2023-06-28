@@ -56,8 +56,8 @@ const About = () => {
               molestie a, ultricies porta urna.
             </p>
           </div>
-          <img src="images/AboutPage/3.jpg" />
-          <img src="images/AboutPage/4.jpg" />
+          <img className="about_page_history_img" src="images/AboutPage/3.jpg" />
+          <img className="about_page_history_img" src="images/AboutPage/4.jpg" />
           <div className="about_page_text">
             <img src="images/AboutPage/target.png" />
             <h1>Why we do it?</h1>
