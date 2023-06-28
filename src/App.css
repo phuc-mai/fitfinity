@@ -164,7 +164,6 @@ body {
   color: var(--white);
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
 }
 
@@ -1385,6 +1384,10 @@ body {
 }
 
 @media (max-width: 800px) {
+  .hero_content {
+    justify-content: center;
+  }
+
   .hero_text {
     display: flex;
     flex-direction: column;
