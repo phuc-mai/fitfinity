@@ -61,12 +61,12 @@ body {
   display: flex;
   align-items: center;
   gap: 25px;
+  cursor: pointer;
 }
 
 .nav_buttons i {
   color: var(--white);
   font-size: 25px;
-  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -1539,10 +1539,6 @@ body {
   .day_schedule {
     padding: 0 30px;
   }
-}
-
-@media (max-width: 400px) {
-
 }
 
 
