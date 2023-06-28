@@ -68,7 +68,7 @@ const Navbar = () => {
               <i class="fa-solid fa-bars"></i>
             </div>
 
-            <Link to="/signin">
+            <Link to="/">
               <i class="fa-regular fa-user"></i>
             </Link>
             <button href="/contact">
