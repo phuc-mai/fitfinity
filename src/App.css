@@ -90,6 +90,15 @@ body {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav_buttons a {
+  text-decoration: none;
+}
+
+.nav_buttons button:hover {
+  color: var(--red);
 }
 
 .nav_buttons button i {

@@ -9,11 +9,13 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
 import Schedule from "./pages/Schedule";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="schedule" element={<Schedule />} />

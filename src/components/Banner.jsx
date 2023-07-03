@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -7,11 +8,13 @@ const Banner = () => {
       <h2>
         <span>Call:</span>(800)-123-4567
       </h2>
-      <div className="banner-btn">
-        <button>
-          CONTACT NOW <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
+      <Link to="/contact">
+        <div className="banner-btn">
+          <button>
+            CONTACT NOW <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </Link>
     </section>
   );
 };

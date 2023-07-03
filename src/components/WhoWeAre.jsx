@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WhoWeAre = () => {
   return (
@@ -15,19 +16,19 @@ const WhoWeAre = () => {
 
         <div>
           <img src="images/who-we-are/workout.png" />
-          <h2>PROGRESSION</h2>
+          <h2>WORKOUT</h2>
           <p>
-            Our team of experts will work with you to create a customized plan
-            that helps you achieve success one step at a time.
+            With a variety of workouts to choose from, you'll have everything
+            you need to get into the best shape of your life.
           </p>
         </div>
 
         <div>
           <img src="images/who-we-are/nutritions.png" />
-          <h2>PROGRESSION</h2>
+          <h2>NUTRITIONS</h2>
           <p>
-            Our team of experts will work with you to create a customized plan
-            that helps you achieve success one step at a time.
+            Our team will work with you to create a personalized meal plan that
+            helps you reach your specific health goals.
           </p>
         </div>
       </div>
@@ -62,12 +63,13 @@ const WhoWeAre = () => {
               </h4>
             </div>
           </div>
-
-          <div className="whoweare_btn">
-            <button>
-              TAKE A TOUR <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+          <Link to="/about">
+            <div className="whoweare_btn">
+              <button>
+                TAKE A TOUR <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </Link>
         </div>
 
         <div className="about_whoweare_img">

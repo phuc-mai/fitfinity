@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
   return (
@@ -17,29 +18,39 @@ const WhyChooseUs = () => {
         <div className="choose-us-benefits">
           <div>
             <img src="images/choose-us/training.png" alt="why-choose-us" />
-            <h5>Free Fitness <br /> Training</h5>
+            <h5>
+              Free Fitness <br /> Training
+            </h5>
           </div>
           <div>
             <img src="images/choose-us/bench-press.png" alt="why-choose-us" />
-            <h5>Modern Gym <br /> Equipments</h5>
+            <h5>
+              Modern Gym <br /> Equipments
+            </h5>
           </div>
           <div>
             <img
               src="images/choose-us/bottle-of-water.png"
               alt="why-choose-us"
             />
-            <h5>Fresh Bottle <br /> Watter</h5>
+            <h5>
+              Fresh Bottle <br /> Watter
+            </h5>
           </div>
           <div>
             <img src="images/choose-us/gym-bag.png" alt="why-choose-us" />
-            <h5>Gym Bag <br /> Equipments</h5>
+            <h5>
+              Gym Bag <br /> Equipments
+            </h5>
           </div>
         </div>
-        <div className="choose-us-btn">
-          <button>
-            OUR CLASSES <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
+        <Link to="/schedule">
+          <div className="choose-us-btn">
+            <button>
+              OUR CLASSES <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </Link>
       </div>
     </section>
   );

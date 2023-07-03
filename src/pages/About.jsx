@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import HeroPages from "../components/HeroPages";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
@@ -36,11 +38,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="whoweare_btn">
-              <button>
-                TAKE A TOUR <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
+            <Link to="/schedule">
+              <div className="whoweare_btn">
+                <button>
+                  TAKE A TOUR <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </Link>
           </div>
 
           <img src="images/who-we-are/run_girl.png" />
@@ -56,8 +60,14 @@ const About = () => {
               molestie a, ultricies porta urna.
             </p>
           </div>
-          <img className="about_page_history_img" src="images/AboutPage/3.jpg" />
-          <img className="about_page_history_img" src="images/AboutPage/4.jpg" />
+          <img
+            className="about_page_history_img"
+            src="images/AboutPage/3.jpg"
+          />
+          <img
+            className="about_page_history_img"
+            src="images/AboutPage/4.jpg"
+          />
           <div className="about_page_text">
             <img src="images/AboutPage/target.png" />
             <h1>Why we do it?</h1>

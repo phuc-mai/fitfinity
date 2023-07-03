@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -8,11 +9,13 @@ const Hero = () => {
           <h4>FIND YOUR ENERGY</h4>
           <h1>MAKE YOUR BODY</h1>
           <h2>FIT & PERFECT</h2>
-          <div className="hero_btn">
-            <button href="/classes">
-              OUR CLASSES <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+          <Link to="/classes">
+            <div className="hero_btn">
+              <button>
+                OUR CLASSES <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </Link>
         </div>
 
         <div className="hero_social">
@@ -20,7 +23,6 @@ const Hero = () => {
           <i class="fa-brands fa-square-instagram"></i>
           <i class="fa-brands fa-square-pinterest"></i>
           <h2>SHARE</h2>
-
         </div>
       </div>
     </section>

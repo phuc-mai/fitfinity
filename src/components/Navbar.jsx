@@ -13,10 +13,10 @@ const Navbar = () => {
   };
   window.addEventListener("scroll", handleScroll);
 
-  const [mobileNav, setMobileNav] = useState(false)
+  const [mobileNav, setMobileNav] = useState(false);
   const openMobileNav = () => {
-    setMobileNav(!mobileNav)
-  }
+    setMobileNav(!mobileNav);
+  };
 
   return (
     <>
@@ -64,27 +64,30 @@ const Navbar = () => {
 
           <div className="nav_buttons">
             {/* Hamburger icon */}
-            <div className="hamburger-menu" onClick={openMobileNav}> 
+            <div className="hamburger-menu" onClick={openMobileNav}>
               <i class="fa-solid fa-bars"></i>
             </div>
 
             <Link to="/">
               <i class="fa-regular fa-user"></i>
             </Link>
-            <button href="/contact">
-              <i
-                class="fa-solid fa-square-plus"
-                style={{ color: "#FF0436" }}
-              ></i>{" "}
-              JOIN CLASS NOW
-            </button>
+            <Link to="/classes">
+              <button>
+                <i
+                  class="fa-solid fa-square-plus"
+                  style={{ color: "#FF0436" }}
+                ></i>{" "}
+                JOIN CLASS NOW
+              </button>
+            </Link>
           </div>
         </div>
 
         {/* Mobile */}
         <div className={`mobile-nav ${mobileNav ? "open-mobile-nav" : ""}`}>
           <div className="mobile-nav-close" onClick={openMobileNav}>
-            <i class="fa-solid fa-xmark"></i></div>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
           <ul className="mobile-nav_links">
             <li>
               <Link to="/" onClick={openMobileNav}>
@@ -98,7 +101,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/schedule" onClick={openMobileNav}>
-              Schedule
+                Schedule
               </Link>
             </li>
             <li>
